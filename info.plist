@@ -69,5 +69,14 @@
 	</array>
 	<key>uuid</key>
 	<string>2DB168AA-8A4D-458B-B6DE-AFC8E60F845E</string>
+		<key>contactEmailRot13</key>
+		<string>zonee@zonee.arg</string>
+		<key>contactName</key>
+		<string>Matthew Barr</string>
+		<key>description</key>
+		<string>This is a bundle for Puppet manifests (http://www.puppetlabs.com/).
+
+Readme is available online at: https://github.com/puppet-textmate-bundle/puppet-textmate-bundle/blob/master/README.markdown
+</string>
 </dict>
 </plist>
