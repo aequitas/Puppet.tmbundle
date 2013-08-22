@@ -3,23 +3,49 @@
 <plist version="1.0">
 <dict>
 	<key>beforeRunningCommand</key>
-	<string>saveActiveFile</string>
+	<string>nop</string>
 	<key>command</key>
 	<string>#!/bin/bash
 CUSTOM='--no-80chars-check --no-double_quoted_strings-check --no-trailing_whitespace-check'
-puppet-lint $CUSTOM $TM_FILEPATH
+"$TM_PUPPET_LINT" $CUSTOM "$TM_FILEPATH"
+true
 </string>
 	<key>input</key>
 	<string>document</string>
-	<key>keyEquivalent</key>
-	<string>@s</string>
+	<key>inputFormat</key>
+	<string>text</string>
+	<key>isDisabled</key>
+	<true/>
 	<key>name</key>
 	<string>Validate On Save</string>
-	<key>output</key>
-	<string>showAsTooltip</string>
+	<key>outputCaret</key>
+	<string>afterOutput</string>
+	<key>outputFormat</key>
+	<string>text</string>
+	<key>outputLocation</key>
+	<string>toolTip</string>
+	<key>requiredCommands</key>
+	<array>
+		<dict>
+			<key>command</key>
+			<string>puppet-lint</string>
+			<key>locations</key>
+			<array>
+				<string>/opt/local/bin/puppet-lint</string>
+				<string>/usr/local/bin/puppet-lint</string>
+				<string>/usr/bin/puppet-lint</string>
+			</array>
+			<key>variable</key>
+			<string>TM_PUPPET_LINT</string>
+		</dict>
+	</array>
 	<key>scope</key>
 	<string>source.puppet</string>
+	<key>semanticClass</key>
+	<string>callback.document.did-save</string>
 	<key>uuid</key>
 	<string>742198AD-F28F-4859-A821-9E8A16CE6809</string>
+	<key>version</key>
+	<integer>2</integer>
 </dict>
 </plist>
